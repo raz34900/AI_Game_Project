@@ -1,4 +1,8 @@
+<img width="374" height="310" alt="image" src="https://github.com/user-attachments/assets/3c62cfed-42e6-4221-ad8f-b54528b5687b" />
+<img width="373" height="330" alt="image" src="https://github.com/user-attachments/assets/68f9fb3d-2ccc-46fc-afed-b0259af95e06" />
+
 ****Game Rules:****
+
 ***Game Environment and Map* -----------------------------**
 
 • Central Arena: The game takes place in a maze containing rooms and corridors 
@@ -93,8 +97,6 @@ ammunition left, the game ends in victory for the second team.
 • Attrition Tiebreaker: In a case where a supply soldier dies and there is no supply 
 left, the team that currently has more health points is the one that will win. 
 
-<img width="374" height="310" alt="image" src="https://github.com/user-attachments/assets/3c62cfed-42e6-4221-ad8f-b54528b5687b" />
-<img width="373" height="330" alt="image" src="https://github.com/user-attachments/assets/68f9fb3d-2ccc-46fc-afed-b0259af95e06" />
 
 
 
