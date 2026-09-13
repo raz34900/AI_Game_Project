@@ -3,9 +3,7 @@
 
 # AI-Driven Tactical Combat Simulation
 
-[![Watch Gameplay Video](https://img.shields.io/badge/Watch_Gameplay_Video-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1VcpgF_0Atg8AIfqlLI-ld2c9PO3bM2A7/view?usp=sharing)
-
-*(Click the button above to watch the gameplay and AI demonstration)*
+https://github.com/user-attachments/assets/62efe977-5970-41e9-b766-3ef6977258e4
 
 ## Tech Stack & Architecture
 ![C#](https://img.shields.io/badge/C%23-8A2BE2?style=for-the-badge&logo=c-sharp&logoColor=white)
