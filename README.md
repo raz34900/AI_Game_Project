@@ -3,7 +3,7 @@
 
 # AI-Driven Tactical Combat Simulation
 
-[![Watch Gameplay Video](https://img.shields.io/badge/Watch_Gameplay_Video-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)]((https://drive.google.com/file/d/1VcpgF_0Atg8AIfqlLI-ld2c9PO3bM2A7/view?usp=sharing))
+[![Watch Gameplay Video](https://img.shields.io/badge/Watch_Gameplay_Video-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1VcpgF_0Atg8AIfqlLI-ld2c9PO3bM2A7/view?usp=sharing)
 
 *(Click the button above to watch the gameplay and AI demonstration)*
 
