@@ -1,98 +1,78 @@
 <img width="374" height="310" alt="image" src="https://github.com/user-attachments/assets/3c62cfed-42e6-4221-ad8f-b54528b5687b" />
 <img width="373" height="330" alt="image" src="https://github.com/user-attachments/assets/68f9fb3d-2ccc-46fc-afed-b0259af95e06" />
 
-****Game Rules:****
+# AI-Driven Tactical Combat Simulation
 
-***Game Environment and Map* -----------------------------**
+[![Watch Gameplay Video](https://img.shields.io/badge/Watch_Gameplay_Video-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)]([YOUR_DRIVE_LINK_HERE](https://drive.google.com/file/d/1VcpgF_0Atg8AIfqlLI-ld2c9PO3bM2A7/view?usp=sharing))
 
-• Central Arena: The game takes place in a maze containing rooms and corridors 
-between them. 
+*(Click the button above to watch the gameplay and AI demonstration)*
 
-• Obstacles: Various obstacles are scattered in the rooms serving as hiding areas - 
-walls, trees, and rocks. 
+## Tech Stack & Architecture
+![C#](https://img.shields.io/badge/C%23-8A2BE2?style=for-the-badge&logo=c-sharp&logoColor=white)
+![FSM](https://img.shields.io/badge/Finite_State_Machine-FF1493?style=for-the-badge)
+![A* Algorithm](https://img.shields.io/badge/A*_Pathfinding-0000FF?style=for-the-badge)
+![Dynamic Mapping](https://img.shields.io/badge/Dynamic_Safety_Maps-228B22?style=for-the-badge)
 
-• Collection Points: 2 ammunition depots (armory in black with an orange dot) and 2 
-pharmacies (hospitals in white with a red '+') are scattered randomly on the map.
+## Project Overview
+**Royal Rescue** is a complex, autonomous 2D tactical combat simulation developed in Unity. Designed and programmed to explore advanced artificial intelligence in gaming, the project features fully autonomous Non-Player Characters (NPCs) that make real-time, life-or-death decisions based on their environment, health, ammunition, and distinct personality traits (e.g., Aggressive vs. Cautious).
 
-• Lakes: There are lakes on the map that slow down the movement speed of the 
-characters passing through them. 
+As a Software Engineer and AI Program Manager, my focus was on building robust logical architectures, including custom pathfinding algorithms, dynamic threat assessment, and Finite State Machines (FSM).
 
-• Shield Houses (Camouflage): There are 2 special items on the map (round shields in 
-gray with a black circle inside them). A player who reaches them turns green and gains 
-immunity from hits for 10 seconds (can shoot, but cannot be hit). The shield disappears 
-after it has been used. 
+---
 
+## Artificial Intelligence & Navigation
+The core of the simulation relies on a sophisticated AI architecture managing 8 independent agents:
+* **Finite State Machine (FSM):** Characters dynamically switch between behavioral states based on real-time needs:
+  * *Engage/Hunt:* Seeking the enemy when resources are optimal.
+  * *Survive/Flee:* Retreating when health or ammo is critically low.
+  * *Resupply:* Navigating to the Supply Soldier for ammunition.
+  * *Heal:* Navigating to the Medic for health restoration.
+* **A* Pathfinding:** Agents calculate the optimal route to their dynamic targets (enemies, medics, or loot) across a complex maze.
+* **Dynamic Safety Mapping:** During room-based combat, a real-time safety grid is generated and updated with every character movement, forcing agents to calculate the safest positioning dynamically.
 
-***Teams and Characters* ---------------------------------**
+---
 
-• Objective: 2 teams participate in the game, where the goal of each team is to eliminate 
-the opposing team. 
+## Teams & Roles
+Two opposing teams fight for dominance. Each team consists of 4 characters with strict logical roles. Friendly fire is disabled.
 
-• Team Composition: Each team consists of 4 characters: two fighters, one medic, and 
-one supply soldier. 
+| Role | Qty | Primary Function | Limitations |
+| :--- | :---: | :--- | :--- |
+| **Fighters** | 2 | Frontline combatants executing tactical maneuvers and utilizing all weaponry. | Rely entirely on support roles for survival; limited inventory. |
+| **Medic** | 1 | Logistics agent. Travels to Hospitals to collect health packs for fighters. | Cannot shoot; cannot heal themselves; vulnerable to attack. |
+| **Supply** | 1 | Logistics agent. Travels to Armories to collect ammo for fighters. | Cannot shoot; cannot resupply themselves; vulnerable to attack. |
 
-• Personal Character: A random "character" (e.g., aggressive fighter vs. cautious 
-fighter) is defined for each character, which makes them behave differently and affects 
-the chances of winning. 
+---
 
-***Health and Ammunition Meters* -----------------------------------**
+## Combat System & Weapons
+Combat triggers automatically when opposing fighters occupy the same room. Fighters utilize a distinct arsenal:
 
-• Team Meters: Each team has meters displaying the amount of health and 
-supplies remaining for each player in real-time during the game. 
+*  **Standard Bullet (Black):** Base attack, reduces enemy health by 2 HP.
+*  **Grenade (Green):** Thrown explosive, reduces enemy health by 8 HP.
+*  **Tactical Mine (Gray/Red):** Placed strategically. Enemies stepping on it lose 20 HP. Each fighter can place exactly one mine per game.
 
-• Personal Indicators: Above each player's head, there is an additional 
-personal meter that helps visualize, using colors, how much health and supply 
-is left in real-time. 
+---
 
-***Artificial Intelligence (AI) and Finite State Machine (FSM)* --------------------------**
+## Environment & Interactive Elements
+The arena is a complex maze of interconnected rooms and corridors featuring interactive tactical elements:
+* **Obstacles:** Walls, trees, and rocks break line-of-sight and serve as cover.
+* **Lakes:** Environmental hazards that significantly slow down movement speed.
+* **Shield Houses (Camouflage):** 2 rare items (gray round shields). Reaching one grants the agent 10 seconds of invulnerability (turns green, can shoot but takes no damage). Consumed upon use.
+* **Resource Nodes:** 2 Armories (Black/Orange) and 2 Hospitals (White/Red Cross). Medics and Supply Soldiers must physically reach these nodes to acquire a single refill charge.
 
-• Decision Making: The characters are managed by a finite state machine (FSM) and 
-make decisions based on their current state (ammunition, health, environment). 
+---
 
-• Aspirations (States): 
+## UI & Telemetry
+The simulation features comprehensive real-time UI tracking for analytical observation:
+* **Global Team Dashboard:** Displays aggregate health and supply metrics for both teams.
+* **Overhead Personal Meters:** Each agent has dynamic, color-coded floating UI bars visualizing precise HP and ammo levels in real-time.
 
-o Engaging the enemy and searching for the rival character. 
-o Survival and escape (when health or ammunition runs out). 
-o Turning to the supply soldier to replenish ammunition. 
-o Turning to the medic to heal and improve health points. 
+---
 
-• Movement and Navigation: After selecting a target, the character navigates to it 
-using the A* search algorithm. 
-
-• Dynamic Safety Map: Within the rooms where fighting takes place, a dynamic safety 
-map is generated that changes in real-time every time a character moves. Character 
-movement in the room must consider this map. 
-
-***Combat System and Weapons* -------------------------------** 
-
-• Combat Rules: Fighting takes place when rival characters are in the same room. 
-There is no friendly fire. The medic and supply soldier cannot shoot, but they can 
-definitely get hit.
-
-• Weapons: 
-
-o Black bullet shot: hits and reduces 2 health points. 
-o Green grenade: thrown, explodes, and reduces 8 health points. 
-o Gray mine with a red dot: every fighter (4 in total) can place a mine in a 
-strategically chosen location. An enemy who steps on it loses 20 health points. 
-Logistics (Medic and Supply) 
-
-• Inventory: Fighters have a limited inventory of health (HP) and ammunition.
-
-• Inventory Renewal: The supply soldier and the medic must physically reach the 
-hospital or armory to collect equipment. One arrival at a building grants them one 
-refill ability (for one time) for a fighter who requests it. 
-
-• Healing Limitations: The medic and supply soldier cannot heal or add life to 
-themselves. 
-
-***Game Ending Conditions (Win/Loss Conditions)* -----------------------**
-
-• Classic Victory: When the two fighters of a certain team die, the second team wins 
-automatically. 
-
-• Technical Victory / Attrition: If a team's supply soldier dies and its fighters have no 
-ammunition left, the game ends in victory for the second team. 
+## Win/Loss Conditions (Game Logic)
+The simulation ends autonomously based on specific logical triggers:
+1. **Classic Victory:** Both opposing fighters are eliminated.
+2. **Technical Attrition:** The opposing Supply Soldier is dead, AND the remaining opposing fighters have 0 ammunition.
+3. **HP Tiebreaker:** If a technical attrition state is reached but both teams are out of ammo/supply, the team with the highest remaining total Health Points wins.
 
 • Attrition Tiebreaker: In a case where a supply soldier dies and there is no supply 
 left, the team that currently has more health points is the one that will win. 
