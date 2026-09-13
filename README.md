@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/62efe977-5970-41e9-b766-3ef6977258e4
 ![Dynamic Mapping](https://img.shields.io/badge/Dynamic_Safety_Maps-228B22?style=for-the-badge)
 
 ## Project Overview
-**Royal Rescue** is a complex, autonomous 2D tactical combat simulation developed in Unity. Designed and programmed to explore advanced artificial intelligence in gaming, the project features fully autonomous Non-Player Characters (NPCs) that make real-time, life-or-death decisions based on their environment, health, ammunition, and distinct personality traits (e.g., Aggressive vs. Cautious).
+A complex, autonomous 2D tactical combat simulation. Designed and programmed to explore advanced artificial intelligence in gaming, the project features fully autonomous Non-Player Characters (NPCs) that make real-time, life-or-death decisions based on their environment, health, ammunition, and distinct personality traits (e.g., Aggressive vs. Cautious).
 
 As a Software Engineer and AI Program Manager, my focus was on building robust logical architectures, including custom pathfinding algorithms, dynamic threat assessment, and Finite State Machines (FSM).
 
