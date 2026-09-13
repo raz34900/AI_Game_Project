@@ -1,0 +1,4 @@
+﻿  NPC.cpp
+C:\Users\raz34\Desktop\FSM\Graphics\Graphics\NPC.cpp(349,91): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\raz34\Desktop\FSM\Graphics\Graphics\NPC.cpp(349,69): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Graphics.vcxproj -> C:\Users\raz34\Desktop\FSM\Graphics\Debug\Graphics.exe
